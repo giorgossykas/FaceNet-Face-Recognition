@@ -1,0 +1,11 @@
+keras==2.1.3
+tensorflow==1.3.0
+cv2
+sklearn
+numpy
+PIL
+scipy
+os
+shutil
+tkinter
+mtcnn
