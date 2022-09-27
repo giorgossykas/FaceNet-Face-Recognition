@@ -1,6 +1,18 @@
+import os.path
+
 from new_user import *
 from process_images import *
 from keras.models import load_model
+
+# Create folders for images if they do not already exist
+if not os.path.exists('data'):
+    dir = os.getcwd()
+    path = os.path.join(dir, 'data')
+    os.mkdir(path)
+    path2 = os.path.join(path, 'train')
+    path3 = os.path.join(path, 'test')
+    os.mkdir(path2)
+    os.mkdir(path3)
 
 
 # Input new user and get path to the images

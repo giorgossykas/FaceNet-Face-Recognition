@@ -4,7 +4,29 @@ import numpy as np
 from PIL import Image
 from keras.models import load_model
 from scipy.spatial import distance
+import tkinter as tk
+from tkinter import simpledialog
 
+############################################
+####### Choose method of recognition #######
+def choose_rec():
+    win = tk.Tk()
+    win.geometry('200x100')
+
+    def on_click(text):
+        global ress
+        ress = text
+        win.destroy()
+
+    b1 = tk.Button(win, text="Continuous/Live", command=lambda: on_click('live'))
+    b1.pack()
+
+    b2 = tk.Button(win, text="Detect and close", command=lambda: on_click('not_live'))
+    b2.pack()
+
+    win.mainloop()
+
+    return ress
 
 ###############################################
 ####### Load the trained images dataset #######
