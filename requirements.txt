@@ -1,5 +1,5 @@
 keras==2.1.3
-tensorflow==1.3.0
+tensorflow==1.15.0
 cv2
 sklearn
 numpy
@@ -9,3 +9,4 @@ os
 shutil
 tkinter
 mtcnn
+h5py==2.10.0
