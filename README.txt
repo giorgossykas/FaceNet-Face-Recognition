@@ -1,31 +1,31 @@
-Αρχεία:
--"register_user.py": Ξεκινάει η καταγραφή και αποθήκευση δεδομένων νέου χρήστη.
--"face_recognition.py": Ξεκινάει η αναγνώριση του προσώπου.
--"new_user.py": Συναρτήσεις για καταγραφή και καταχώρηση στοιχείων χρήστη.
--"process_images.py": Συναρτήσεις για επεξεργασία και την εξαγωγή δεδομένων των εικόνων.
--"classification_L2_Norm": Συναρτήσεις για επεξεργασία δεδομένων χρήστη κατά τη διάρκεια της αναγνώρισης και υπολογισμός της απόφασης του αλγορίθμου.
--"embeddings.npz": Θα δημιουργηθεί μετά την πρώτη εκτέλεση του "register_user.py" και θα περιέχει τα embeddings του.
--Φάκελος "model": Μοντέλο Facenet και "haarcascade_frontalface_alt.xml".
--Φάκελος "data": Directory που θα μπουν τα δεδομένα των χρηστών.
--Φάκελος "code": Περιέχει την αρχιτεκτονική του FaceNet, "inception_resnet_v1.py"
--"requirements.txt": Απαιτούμενα πακέτα.
--"README.txt": Οδηγίες και πληροφορίες.
+Files:
+- register_user.py: Recording and saving user data.
+- face_recognition.py: Starts face recognition.
+- new_user.py : Functions for recording and saving user data.
+- process_images.py : Functions for processing and feature/embedding extraction of user images.
+- classification_L2_Norm.py: Functions for data processing at the face recognition stage.
+- embeddings.npz: It will be created after running register_user.py once and will contain user embedding and id/name.
+- model: Facenet model and haarcascade_frontalface_alt.xml.
+- code: Constains the source code for the FaceNet model architecture, inception_resnet_v1.py .
+- requirements.txt : Required packages and versions (for virtual environment).
+- README.txt : Instructions and information.
 
-Οδηγίες: 
-1. Unzip το αρχείο “FaceNet face recognition.zip” ή clone.
-2. Άνοιγμα του φακέλου “FaceNet face recognition” στο IDE.
-3. Interpreter με Python 3.6.2 (ίσως δουλεύει και με άλλες εκδόσεις αλλά χρησιμοποιώ αυτή επειδή την υποστηρίζει το PyCharm και με αυτή φτιάχτηκε το μοντέλο FaceNet.)
-4. Εγκατάσταση κατάλληλων εκδόσεων tensorflow και keras και πακέτων από το “requirements.txt”.
-5. Run το “register_user.py” για να βγάλει φωτογραφίες ο νέος χρήστης. Η αποθήκευση των δεδομένων θα γίνει αυτόματα στους κατάλληλους φακέλους.
-6. Run το “face_recognition.py” για να γίνει η αναγνώριση του προσώπου.
-7. Τυπώνεται το αποτέλεσμα του αλγορίθμου.
-
-
-Ο κώδικας γράφτηκε σε PyCharm Community Edition 2021.3.3 με Python 3.6.2,
-και το pretrained μοντέλο FaceNet δημιουργήθηκε σε Ubuntu16.04/Windows10, Python 3.6.2,
-tensorflow 1.3.0 και keras 2.1.2 (χρησιμοποίησα keras 2.1.3 αντί για 2.1.2 γιατί υπήρχε
-πρόβλημα με τη Softmax)
+: Instructions
+1. Clone repository.
+2. Conda environment FaceNet.yml contains all packages and dependancies (). In case of VirtualEnvironment packages are in requirements.txt.
+3. Download FaceNet model from one of two links: 1) https://github.com/davidsandberg/facenet , 2)  .
+4. Place the file downloaded "facenet_keras.h5" in the folder: /model/keras . If not placed there the algorithm will not find it.
+5. Run register_user.py to take pictures of new user. Data will be saved in the right folders.
+6. Run face_recognition.py and choose method, real time continuous or just one person and close.
+7. Results printed: for each frame in which a face was detected the algorithm will print a score of comparison/distance with all the registered users.
+   If the score is less than one it will choose that user as the prediction and return the name. Otherwise it will keep printing. 
+   If no face has been detected
+   in case of "detect and close" option the algorithm will stop after 30 non-satisfied detections.
 
 
-*** Να μη μετονομαστούν και να μη μετακινηθούν οι φάκελοι που ήδη υπάρχουν
-    στο “FaceNet_face_recognition.zip”.
+Code was written in PyCharm Community Edition 2021.3.3 with Python 3.6 and
+the pre-trained FaceNet model was created in Ubuntu16.04/Windows10, Python 3.6.2, tensorflow 1.3.0 and keras 2.1.2 .
+(tensorflow version used in conda environment is 1.15.0 and keras is 2.3.1 due to some compatibility issues.)
+Some changes are necessary in order to run on GPU.
+
+FaceNet model was created by David Sandberg.
