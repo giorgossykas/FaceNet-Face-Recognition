@@ -1,3 +1,6 @@
+## Face Recognition  
+Using the FaceNet model created by [David Sandberg](https://github.com/davidsandberg) the repository contains code that will recognize a face or detect it in real time.
+
 Files:
 - register_user.py: Recording and saving user data.
 - face_recognition.py: Starts face recognition.
@@ -12,8 +15,8 @@ Files:
 
 : Instructions
 1. Clone repository.
-2. Conda environment FaceNet.yml contains all packages and dependancies (). In case of VirtualEnvironment packages are in requirements.txt.
-3. Download FaceNet model from one of two links: 1) https://github.com/davidsandberg/facenet , 2)  .
+2. Conda environment FaceNet.yml contains all packages and dependancies. In case of VirtualEnvironment packages are in requirements.txt.
+3. Download FaceNet model from one of two links: 1) [David Sandber repo](https://github.com/davidsandberg/facenet) , 2) [Google drive](MYDRIVE) .
 4. Place the file downloaded "facenet_keras.h5" in the folder: /model/keras . If not placed there the algorithm will not find it.
 5. Run register_user.py to take pictures of new user. Data will be saved in the right folders.
 6. Run face_recognition.py and choose method, real time continuous or just one person and close.
@@ -27,5 +30,3 @@ Code was written in PyCharm Community Edition 2021.3.3 with Python 3.6 and
 the pre-trained FaceNet model was created in Ubuntu16.04/Windows10, Python 3.6.2, tensorflow 1.3.0 and keras 2.1.2 .
 (tensorflow version used in conda environment is 1.15.0 and keras is 2.3.1 due to some compatibility issues.)
 Some changes are necessary in order to run on GPU.
-
-FaceNet model was created by David Sandberg.
