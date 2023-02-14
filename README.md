@@ -16,7 +16,7 @@ Using the FaceNet model created by [David Sandberg](https://github.com/davidsand
 ### Instructions
 1. Clone repository.
 2. Conda environment FaceNet.yml contains all packages and dependancies. In case of VirtualEnvironment packages are in requirements.txt.
-3. Download FaceNet model from one of two links: 1) [David Sandber repo](https://github.com/davidsandberg/facenet) , 2) [Google drive](MYDRIVE) .
+3. Download FaceNet model from one of two links: 1) [David Sandber repo](https://github.com/davidsandberg/facenet) , 2) [Google drive](https://drive.google.com/drive/folders/17_KjPI2rfze0d23VBWxdC9HTS0ZeF7x3?usp=sharing) .
 4. Place the file downloaded "facenet_keras.h5" in the folder: /model/keras . If not placed there the algorithm will not find it.
 5. Run register_user.py to take pictures of new user. Data will be saved in the right folders.
 6. Run face_recognition.py and choose method, real time continuous or just one person and close.
