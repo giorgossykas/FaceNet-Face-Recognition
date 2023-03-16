@@ -109,3 +109,4 @@ venv.bak/
 
 embeddings.npz
 data
+.idea
